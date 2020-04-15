@@ -5,5 +5,10 @@
 <input [(ngModel)] = "input2">
 <br/>
 <br/>
-<button (click) = "calculate(input1, input2)">Calculate</button>
+<button (click) = "calc(input1, input2)">Calculate</button>
+<button (click) = "reset()">Reset</button>
 <p>Results: {{output}}</p>
+<br/>
+<div *ngFor = "let data of printArr">
+  {{data}}
+</div>
