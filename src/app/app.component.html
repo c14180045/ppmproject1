@@ -9,6 +9,12 @@
 <button (click) = "reset()">Reset</button>
 <p>Results: {{output}}</p>
 <br/>
-<div *ngFor = "let data of printArr">
+<ng-template
+*ngIf="show; then showArr; else hideArr">
+<ng-template #showArr>
+  <div *ngFor = "let data of printArr">
   {{data}}
-</div>
+  </div>
+</ng-template>
+<ng-template #hideArr>
+</ng-template>3

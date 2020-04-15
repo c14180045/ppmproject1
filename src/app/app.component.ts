@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
   output = 0;
+  show: boolean = false;
   printArr = [];
   calc(input1, input2){
+  this.show = true;
   this.output = Math.pow(parseInt(input1),parseInt(input2))
   if (this.output %2 == 0)
   {
@@ -90,6 +92,10 @@ export class AppComponent  {
     }
   }
   };
+  reset(){
+    this.show = false;
+    this.printArr=[];
+  }
 }
 
 
