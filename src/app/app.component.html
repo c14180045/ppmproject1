@@ -11,10 +11,11 @@
 <br/>
 <ng-template
 *ngIf="show; then showArr; else hideArr">
+</ng-template>
 <ng-template #showArr>
   <div *ngFor = "let data of printArr">
   {{data}}
   </div>
 </ng-template>
 <ng-template #hideArr>
-</ng-template>3
+</ng-template>
