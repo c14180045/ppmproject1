@@ -38,11 +38,11 @@ export class AppComponent  {
         {
           for(var z = 0;z<x2;z++)
           {
-            str = str + "o";
+            str = str + "*";
           }
           for(var z = 0;z<x1;z++)
           {
-            str = str + "*";
+            str = str + "o";
           }
           this.printArr.push(str);
           str=""
@@ -51,41 +51,41 @@ export class AppComponent  {
         }
         for(var z = 0;z<x2;z++)
         {
-          str = str + "o";
+          str = str + "*";
         }
         this.printArr.push(str);
         str=""
         x2--;
       }
     }
-    else if(input1<input2)
+    else if(input1>input2)
     {
-      let x = 1;
-      let x2 = parseInt(input1);
-      for(var y = parseInt(input2); y>0;y--)
+      let x1 = parseInt(input1);
+      let x2 = 1;
+      for(var y = parseInt(input1); y>0;y--)
       {
-        while(x2<=input1)
+        while(x1<=input1)
         {
+          for(var z = 0;z<x1;z++)
+          {
+            str = str + "*";
+          }
           for(var z = 0;z<x2;z++)
           {
             str = str + "o";
           }
-          for(var z = 0;z<x;z++)
-          {
-            str = str + "*";
-          }
           this.printArr.push(str);
           str=""
-          x++;
-          x2--;
+          x1--;
+          x2++;
         }
-        for(var z = 0;z<x2;z++)
+        for(var z = 0;z<x1;z++)
         {
-          str = str + "o";
+          str = str + "*";
         }
         this.printArr.push(str);
         str=""
-        x++;
+        x1--;
       }
     }
   }
