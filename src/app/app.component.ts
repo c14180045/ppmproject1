@@ -64,15 +64,15 @@ export class AppComponent  {
       let x2 = 1;
       for(var y = parseInt(input1); y>0;y--)
       {
-        while(x1<=input1)
+        while(x2<=input2)
         {
           for(var z = 0;z<x1;z++)
           {
-            str = str + "*";
+            str = str + "o";
           }
           for(var z = 0;z<x2;z++)
           {
-            str = str + "o";
+            str = str + "*";
           }
           this.printArr.push(str);
           str=""
@@ -81,7 +81,7 @@ export class AppComponent  {
         }
         for(var z = 0;z<x1;z++)
         {
-          str = str + "*";
+          str = str + "o";
         }
         this.printArr.push(str);
         str=""
