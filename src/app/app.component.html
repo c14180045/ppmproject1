@@ -1,4 +1,9 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Input 1:<br/></p>
+<input [(ngModel)] = "input1">
+<br/>
+<p>Input 2:<br/></p>
+<input [(ngModel)] = "input2">
+<br/>
+<br/>
+<button (click) = "calculate(input1, input2)">Calculate</button>
+<p>Results: {{output}}</p>
